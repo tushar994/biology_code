@@ -34,7 +34,7 @@ for i,n in enumerate(dna):
     
     if(i+3 < dna_length ):
         flag = 1
-        for j in range(0,3):
+        for j in range(0,2):
             a = dna[i+j]
             b = dna[i+3-j]
             if((not(a=='g' and b=='c')) and (not(a=='c' and b=='g')) and (not(a=='t' and b=='a')) and (not(a=='a' and b=='t'))):
