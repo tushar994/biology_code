@@ -47,7 +47,7 @@ print("tRNA is :" + tRNA)
 
 protein = []
 
-print("okay")
+
 
 start_flag = 0
 for i in range(0, len(mRNA), 3):
@@ -66,13 +66,13 @@ for i in range(0, len(mRNA), 3):
                 if(three[2]=='u' or three[2]=='c'):
                     protein.append("tyr")
                 else:
-                    protein.append("STOP")
+                    # protein.append("STOP")
                     break
             else:
                 if(three[2]=='u' or three[2]=='c'):
                     protein.append("cys")
                 elif(three[2]=='a'):
-                    protein.append("STOP")
+                    # protein.append("STOP")
                     break
                 else:
                     protein.append("trp")
@@ -132,6 +132,7 @@ for i in range(0, len(mRNA), 3):
 if(start_flag==0):
     print("no start colon found")
 else:
+    print("the protein strand is")
     for element in protein:
         print(element, end=" ")
 
