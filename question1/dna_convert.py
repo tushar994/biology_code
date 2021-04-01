@@ -48,75 +48,91 @@ print("tRNA is :" + tRNA)
 protein = []
 
 print("okay")
+
+start_flag = 0
 for i in range(0, len(mRNA), 3):
     # print(i)
     three = mRNA[i:i+3]
     if(three[0]=='u'):
-        if(three[1]=='u'):
-            if(three[2]=='u' or three[2]=='c'):
-                protein.append("phe")
+        if(start_flag==1):
+            if(three[1]=='u'):
+                if(three[2]=='u' or three[2]=='c'):
+                    protein.append("phe")
+                else:
+                    protein.append("leu")
+            elif(three[1]=='c'):
+                protein.append("ser")
+            elif(three[1]=='a'):
+                if(three[2]=='u' or three[2]=='c'):
+                    protein.append("tyr")
+                else:
+                    protein.append("STOP")
+                    break
             else:
-                protein.append("leu")
-        elif(three[1]=='c'):
-            protein.append("ser")
-        elif(three[1]=='a'):
-            if(three[2]=='u' or three[2]=='c'):
-                protein.append("tyr")
-            else:
-                protein.append("STOP")
-        else:
-            if(three[2]=='u' or three[2]=='c'):
-                protein.append("cys")
-            elif(three[2]=='a'):
-                protein.append("STOP")
-            else:
-                protein.append("trp")
+                if(three[2]=='u' or three[2]=='c'):
+                    protein.append("cys")
+                elif(three[2]=='a'):
+                    protein.append("STOP")
+                    break
+                else:
+                    protein.append("trp")
     
     elif(three[0]=='c'):
-        if(three[1]=='u'):
-            protein.append("leu")
-        elif(three[1]=='c'):
-            protein.append("pro")
-        elif(three[1]=='g'):
-            protein.append("arg")
-        else:
-            if(three[2]=='u' or three[2]=='c'):
-                protein.append("his")
+        if(start_flag==1):
+            if(three[1]=='u'):
+                protein.append("leu")
+            elif(three[1]=='c'):
+                protein.append("pro")
+            elif(three[1]=='g'):
+                protein.append("arg")
             else:
-                protein.append("gln")
+                if(three[2]=='u' or three[2]=='c'):
+                    protein.append("his")
+                else:
+                    protein.append("gln")
     
     elif(three[0]=='a'):
         if(three[1]=='u'):
             if(three[2]=='g'):
                 protein.append("met")
+                start_flag = 1
             else:
-                protein.append("ile")
+                if(start_flag==1):
+                    protein.append("ile")
         elif(three[1]=='c'):
-            protein.append("thr")
+            if(start_flag==1):
+                protein.append("thr")
         elif(three[1]=='a'):
-            if(three[2]=='u' or three[2]=='c'):
-                protein.append("asn")
-            else:
-                protein.append("lys")
+            if(start_flag==1):
+                if(three[2]=='u' or three[2]=='c'):
+                    protein.append("asn")
+                else:
+                    protein.append("lys")
         else:
-            if(three[2]=='u' or three[2]=='c'):
-                protein.append("ser")
-            else:
-                protein.append("arg")
+            if(start_flag==1):
+                if(three[2]=='u' or three[2]=='c'):
+                    protein.append("ser")
+                else:
+                    protein.append("arg")
     else:
-        if(three[1]=='u'):
-            protein.append("val")
-        elif(three[1]=='c'):
-            protein.append("ala")
-        elif(three[1]=='a'):
-            if(three[2]=='u' or three[2]=='c'):
-                protein.append("asp")
+        if(start_flag==1):
+            if(three[1]=='u'):
+                protein.append("val")
+            elif(three[1]=='c'):
+                protein.append("ala")
+            elif(three[1]=='a'):
+                if(three[2]=='u' or three[2]=='c'):
+                    protein.append("asp")
+                else:
+                    protein.append("glu")
             else:
-                protein.append("glu")
-        else:
-            protein.append("gly")
+                protein.append("gly")
 
-for element in protein:
-    print(element, end=" ")
+
+if(start_flag==0):
+    print("no start colon found")
+else:
+    for element in protein:
+        print(element, end=" ")
 
 print("\n")
