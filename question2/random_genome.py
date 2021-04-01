@@ -33,9 +33,9 @@ while ( i<length):
     if(a==3):
         genome = genome + 'c'
     a = random.randint(0,100)
-    # if(a>=100):
-    #     genome = genome + "gaattc"
-    #     i+= 5
+    if(a>=100):
+        genome = genome + "gaattc"
+        i+= 5
     i+=1
 
 print(genome)
