@@ -1,5 +1,5 @@
 dna = input("please give the dna sequence : \n")
-
+print("\n\n\n")
 dna = dna.lower()
 
 # ecoRI
@@ -19,7 +19,7 @@ for i in range(len(dna)-5,len(dna)):
 
 print("\n")
 for val in split_index:
-    print("ecoRI split at the index : "+str(val[0]))
+    print("ecoRI split at the index on W strand: "+str(val[0]))
 
 
 # gtttcattataccagtttagaattctctatcgacagggcgttgagtgtgaattcgtgcttactcacggctgaattcggcatgtaggtaacagtagtggggaagcgtaacatctgaggcctgactcacatatagagt gtcgaccaaggggtgaagcatcatacgccatacaggcccctagcgaaacgacctagtcta aagacacacgagaatgaaacccgtggacttggttacagcgtaataatctggtcagagctg gtccggcgctggcgatgtaccttacgccactgcaaaccggctttgcagagaacatctggg tacattcccgtgtcatgtcaaagcaggtgattcccgcgaaaaacaattaacgacgcattt gctattgacgaagtcctagttctccgaattgagcgggagacatatgatgtcgagactgca ggaaccgaattatcctgtccgcagatccaatagctcacagaggtaaggggagtgtgatggtgccctagggtgtttgaacg
