@@ -14,9 +14,14 @@ gtggtacgggggtgatg|aattctaggtcaaagtagtaattaattattagccaccgacccatagtgactaagagatacta
 
 indexs of cleavages =
 ```
-ecoRI split at the index on W strand: 17
-ecoRI split at the index on W strand: 179
-ecoRI split at the index on W strand: 453
+fragment 1 starts at 1 and ends at 17.
+it's size is 17
+fragment 2 starts at 18 and ends at 179.
+it's size is 162
+fragment 3 starts at 180 and ends at 453.
+it's size is 274
+fragment 4 starts at 454 and ends at 503.
+it's size is 50
 ```
 
 On using online mapper, we get the following cut sites on the W strands
@@ -39,10 +44,16 @@ ttcctttgctcccagcggttccgatgccggggacaccgacatccacgtggccgacagtattactggccgcgacaccgagt
 ```
 indexs of cleavages =
 ```
-ecoRI split at the index on W strand: 104
-ecoRI split at the index on W strand: 153
-ecoRI split at the index on W strand: 381
-ecoRI split at the index on W strand: 400
+fragment 1 starts at 1 and ends at 104.
+it's size is 104
+fragment 2 starts at 105 and ends at 153.
+it's size is 49
+fragment 3 starts at 154 and ends at 381.
+it's size is 228
+fragment 4 starts at 382 and ends at 400.
+it's size is 19
+fragment 5 starts at 401 and ends at 573.
+it's size is 173
 ```
 
 On using online mapper, we get the following cut sites on the W strands
@@ -64,9 +75,14 @@ ggtccttgggaagcattaggtcccgtctttgtgtaaatctcatgcgtttggtaagtaatgggcacctcagggctgttcga
 ```
 indexs of cleavages =
 ```
-ecoRI split at the index on W strand: 123
-ecoRI split at the index on W strand: 528
-ecoRI split at the index on W strand: 544
+fragment 1 starts at 1 and ends at 123.
+it's size is 123
+fragment 2 starts at 124 and ends at 528.
+it's size is 405
+fragment 3 starts at 529 and ends at 544.
+it's size is 16
+fragment 4 starts at 545 and ends at 672.
+it's size is 128
 ```
 
 On using online mapper, we get the following cut sites on the W strands
@@ -88,7 +104,8 @@ aaccccaaagtcgccagatataccgcgtatccttcccatcccctgcctatcttgacccacttgtactgacgtgcccaagt
 ```
 indexs of cleavages =
 ```
-NONE
+fragment 1 starts at 1 and ends at 500.
+it's size is 500
 ```
 
 On using online mapper, we get the following cut sites on the W strands
